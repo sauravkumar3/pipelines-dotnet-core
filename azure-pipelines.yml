@@ -8,6 +8,14 @@
 trigger:
 - master
 
+#trigger:
+#  - master
+#  - releases/*
+  
+#pr:
+#  - master
+#  - releases/*
+
 strategy:
   matrix:
     linux:
@@ -20,6 +28,9 @@ strategy:
 
 pool:
   vmImage: $(imageName)
+  
+#pool:
+#  vmImage: "ubuntu-16.04"
 
 variables:
   buildConfiguration: 'Release'
